@@ -57,11 +57,9 @@ def get_year(df):
 	l = []
 
 	for _, row in months[::-1].iteritems():
-		if row <= a:
-			l.append(b)
-		else:
-			l.append(b-1)
+		if row > a:
 			b -= 1
+		l.append(b)
 		a = row
 	return  pd.Series(l[::-1])
 
@@ -78,5 +76,4 @@ def get_year(df):
 
 if __name__ == '__main__':
 	df = get_data('1H_2.txt')
-	gb
 

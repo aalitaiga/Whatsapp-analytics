@@ -16,12 +16,12 @@ def gbplot_pie(fractions, #values for the wedges
               title = '', #title of the pie chart
               cm_name = 'Pastel1', #name of the matplotlib colormap to use
               autopct = '%1.1f%%', #format the value text on each pie wedge
-              labeldistance = 1.05, #where to place wedge labels in relation to pie wedges
+              labeldistance = 1.1, #where to place wedge labels in relation to pie wedges
               shadow = True, #shadow around the pie
               startangle = 90, #rotate 90 degrees to start the top of the data set on the top of the pie
               edgecolor = 'w', #color of pie wedge edges
               width = 8, #width of the figure in inches
-              height = 8, #height of the figure in inches
+              height = 10, #height of the figure in inches
               grouping_threshold = None, #group all wedges below this value into one 'all others' wedge
               grouping_label = None): #what the label the grouped wedge
     
@@ -67,4 +67,6 @@ def gbplot_pie(fractions, #values for the wedges
     
     # set the title and show the plot
     ax.set_title(title, fontproperties=title_font)
+    ax.axis('equal')
+    plt.tight_layout()
     plt.show()
