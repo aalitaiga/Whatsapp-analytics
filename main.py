@@ -26,7 +26,6 @@ def get_data(filename):
 	df =  pd.DataFrame([match.groupdict() for match in matches])
 	return clean_data(df)
 
-
 def clean_data(df):
 	# Change format to dd mm HH:mm
 	df.apply(format_date, axis=1)
@@ -38,7 +37,6 @@ def clean_data(df):
 	df.loc[df.message != '', 'action'] = 'message'
 	df.loc[df.message == '', 'message'] = pd.np.nan
 	return df
-
 	
 def format_date(row):
 	day, month, _, message_time = row['date'].split(' ')

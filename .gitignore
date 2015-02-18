@@ -1,0 +1,8 @@
+# compile python module
+*.pyc
+
+# Test data
+*.txt
+
+# IPython notebook
+.ipynb_checkpoints
