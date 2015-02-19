@@ -5,9 +5,9 @@ import datetime as dt
 import pandas as pd
 import re
 
-from utils import *
+# from utils import gbplot_pie
 
-# Improve way action are handled
+# To do improve way action are handled
 string = r"""(?P<date>\d{1,2} \w{3,4} à \d{1,2}:\d{2}) - (?P<name>[\+\w]+(?::\s*[\w\+]+)*|[\+\w\s]+?)(?:\s(?P<action>a été ajouté\(e\)|est parti|a retiré [^\n]*|a changé (?:le sujet en ”.*?”|l'icône de ce groupe|de [^à]+à [^\n]*))|:)(?P<message>.*?)(?=\s*\d{1,2} \w{3,4} à \d{1,2}:\d{2}|$)"""
 regex = re.compile(string)
 
@@ -54,7 +54,7 @@ def get_year(df):
 	b = dt.datetime.now().year
 	l = []
 
-	for _, row in months[::-1].iteritems():
+	for row in reversed(months):
 		if row > a:
 			b -= 1
 		l.append(b)
