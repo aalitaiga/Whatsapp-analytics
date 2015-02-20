@@ -8,6 +8,7 @@ import re
 # from utils import gbplot_pie
 
 # To do improve way action are handled
+# Number are not handled if Name is not known
 string = r"""(?P<date>\d{1,2} \w{3,4} à \d{1,2}:\d{2}) - (?P<name>[\+\w]+(?::\s*[\w\+]+)*|[\+\w\s]+?)(?:\s(?P<action>a été ajouté\(e\)|est parti|a retiré [^\n]*|a changé (?:le sujet en ”.*?”|l'icône de ce groupe|de [^à]+à [^\n]*))|:)(?P<message>.*?)(?=\s*\d{1,2} \w{3,4} à \d{1,2}:\d{2}|$)"""
 regex = re.compile(string)
 
