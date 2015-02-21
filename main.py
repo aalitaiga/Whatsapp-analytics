@@ -15,8 +15,7 @@ regex = re.compile(string)
 french_d = {
 		'Jan': '01', 'Feb': '02', 'Mars': '03', 'Avr': '04',
 		'Mai': '05', 'Juin': '06', 'Juil': '07', 'Aout': '08',
-		'Sep': '09', 'Oct': '10', 'Nov': '11',
-		'Dec': '12'
+		'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
 	}
 
 def get_data(filename):
